@@ -138,12 +138,12 @@ The Claude Code sub-agents are defined in `.claude/agents/` and will be automati
 - **Updates context**: Creates their own context file documenting work performed
 - **Prepares handoff**: Sets up context for the next agent in sequence
 
-### Sub-Agent Files Created
-- `.claude/agents/session-manager.md`: Session structure and planning
+### Sub-Agent Files Available
+- `.claude/agents/session-manager.md`: Session structure and planning with cross-week intelligence
 - `.claude/agents/content-curator.md`: Speaker coordination and content preparation
-- `.claude/agents/knowledge-organizer.md`: Note processing and documentation
-- `.claude/agents/archive-manager.md`: Content organization and knowledge base updates
-- `.claude/agents/meeting-coordinator.md`: Logistics and communication coordination
+- `.claude/agents/topic-manager.md`: Pipeline management, submissions, and community engagement
+- `.claude/agents/meeting-coordinator.md`: Logistics, communication, and facilitation support
+- `.claude/agents/knowledge-organizer.md`: Note processing and structured documentation
 
 ## Workflow Examples
 
@@ -188,19 +188,19 @@ The existing slash commands now trigger orchestrated workflows:
 
 - **`/new-session`** → Triggers Session Creation Workflow
   - Invokes: session-manager → content-curator → meeting-coordinator
-  - Creates: Complete session folder with all materials
+  - Creates: Complete session folder with all materials and coordination
 
 - **`/prep-meeting`** → Triggers Meeting Preparation Workflow
-  - Invokes: content-curator → meeting-coordinator
-  - Updates: Existing session with final prep materials
+  - Invokes: meeting-coordinator (with content-curator context)
+  - Creates: Comprehensive logistics, communication, and facilitation materials
 
 - **`/process-notes`** → Triggers Note Processing Workflow
-  - Invokes: knowledge-organizer → archive-manager
-  - Creates: Structured documentation and knowledge base updates
+  - Invokes: knowledge-organizer
+  - Creates: Structured documentation, action items, and knowledge base updates
 
 - **`/update-backlog`** → Triggers Backlog Management Workflow
-  - Invokes: content-curator → archive-manager
-  - Updates: Submission queue and resource catalogs
+  - Invokes: topic-manager
+  - Updates: Content pipeline, submissions, and community engagement materials
 
 ### Workflow Activation
 Each command triggers the orchestrator, which:
