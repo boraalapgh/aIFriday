@@ -1,0 +1,90 @@
+# AI Friday Project .gitignore
+
+# Node.js dependencies
+automation/node_modules/
+automation/package-lock.json
+automation/npm-debug.log*
+automation/yarn-debug.log*
+automation/yarn-error.log*
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Meeting recordings and large files
+meetings/sessions/*/artifacts/recording/*.mp4
+meetings/sessions/*/artifacts/recording/*.mov
+meetings/sessions/*/artifacts/recording/*.avi
+meetings/sessions/*/artifacts/recording/*.mkv
+meetings/archive/*/artifacts/recording/*.mp4
+meetings/archive/*/artifacts/recording/*.mov
+meetings/archive/*/artifacts/recording/*.avi
+meetings/archive/*/artifacts/recording/*.mkv
+
+# Large materials and uploads
+meetings/sessions/*/artifacts/materials/*.pptx
+meetings/sessions/*/artifacts/materials/*.pdf
+meetings/sessions/*/artifacts/materials/*.key
+meetings/archive/*/artifacts/materials/*.pptx
+meetings/archive/*/artifacts/materials/*.pdf
+meetings/archive/*/artifacts/materials/*.key
+
+# Personal notes and drafts
+**/personal-notes.md
+**/draft-*.md
+**/scratch-*.md
+
+# Confluence export temporary files
+**/confluence-export/*.html
+**/confluence-export/*.docx
+
+# Automation logs
+automation/logs/
+automation/*.log
+
+# Test files
+automation/test/
+automation/__tests__/
+
+# Generated files
+automation/dist/
+automation/build/
+
+# Config files with sensitive data
+automation/config/local.json
+automation/config/production.json
+
+# Backup files
+*.backup
+*.bak
+
+# Calendar files (may contain meeting links)
+meetings/sessions/*/calendar/*.ics
+
+# Processing temporary files
+meetings/sessions/*/processing-temp/
+meetings/archive/*/processing-temp/
