@@ -1,36 +1,73 @@
-Create a new AI Friday session with complete folder structure and templates.
+Create a new AI Friday session using the orchestrated agent system with complete folder structure, templates, and cross-week intelligence.
 
-You are setting up a new AI Friday session. Follow these steps:
+This command triggers the **Session Creation Workflow** using the AI Friday orchestrator and specialized sub-agents.
 
-1. **Ask for session details:**
-   - Session date (format: YYYY-MM-DD)
-   - Session number/week
-   - Host name
-   - Any pre-planned topics or speakers
+## What This Command Does
 
-2. **Create session folder structure:**
-   ```
-   meetings/sessions/YYYY-MM-DD-week-N/
-   ├── agenda.md
-   ├── notes.md
-   ├── submissions/
-   ├── demos/
-   ├── artifacts/
-   └── follow-ups.md
-   ```
+1. **Gathers Session Details**: Collects session date, host, theme, and special requirements
+2. **Analyzes Previous Sessions**: Reviews recent sessions for successful patterns and host preferences
+3. **Creates Week-Specific Folder**: Sets up complete session structure with context management
+4. **Invokes Specialized Sub-Agents**: Coordinates session-manager → content-curator → meeting-coordinator
+5. **Delivers Complete Session Package**: All templates, prep materials, and coordination tools ready
 
-3. **Generate session files:**
-   - **agenda.md**: Use the agenda template with the specific date and details
-   - **notes.md**: Create the scribe template ready for meeting notes
-   - **follow-ups.md**: Template for action items and next steps
+## Session Details Required
 
-4. **Update tracking:**
-   - Add the session to the main sessions index
-   - Create any needed reminder templates
+When you run this command, you'll be asked for:
+- **Session Date** (YYYY-MM-DD format)
+- **Week Number** (which AI Friday session this is)
+- **Host Name** (who will be moderating)
+- **Session Theme** (focus area like "productivity tools", "automation workflows", etc.)
+- **Special Requirements** (recording, specific tech needs, etc.)
 
-5. **Prep checklist:**
-   - Generate a pre-meeting checklist for the host
-   - List any baseline topics that could be used if needed
-   - Prepare submission form links
+## What Gets Created
 
-Focus on making this session ready for a successful AI Friday meeting!
+### Week-Specific Session Folder
+```
+meetings/sessions/YYYY-MM-DD-week-N/
+├── context/                    # Agent coordination and decisions
+│   ├── workflow.json           # Main workflow tracking
+│   ├── session_manager.json    # Session structure decisions
+│   ├── content_curator.json    # Speaker and content coordination
+│   └── meeting_coordinator.json # Logistics and communication
+├── inputs/                     # Ready for raw materials
+├── generated/                  # Agent-created materials
+│   ├── agenda.md               # Theme-optimized agenda
+│   ├── prep_checklist.md       # Timeline-based prep tasks
+│   ├── speaker_guides/         # Individual speaker materials
+│   └── communication_templates/ # Email/Slack templates
+├── outputs/                    # Final deliverables (post-session)
+├── artifacts/                  # Session recordings, demos, slides
+└── README.md                   # Session overview and links
+```
+
+### Cross-Week Intelligence Applied
+- **Previous Session Analysis**: Reviews 2-3 recent sessions for successful patterns
+- **Host Preferences**: Applies learned preferences for returning hosts
+- **Theme Optimization**: Uses successful formats from similar themed sessions
+- **Resource Integration**: Selects appropriate baseline topics as backup content
+
+## Sub-Agent Workflow
+
+1. **Session Manager**: Creates structure, generates agenda and prep materials based on cross-week analysis
+2. **Content Curator**: Finds speakers, matches topics to theme, prepares backup content
+3. **Meeting Coordinator**: Sets up logistics, communication schedules, and facilitation materials
+
+## Expected Outputs
+
+By the end of this workflow, you'll have:
+- ✅ Complete session folder with all necessary structure
+- ✅ Theme-optimized agenda with timing and format
+- ✅ Host prep checklist with timeline-based tasks
+- ✅ Speaker coordination materials and guides
+- ✅ Communication templates for outreach and reminders
+- ✅ Baseline topic backup content ready
+- ✅ Complete context trail for audit and future learning
+
+## Usage
+
+Simply run:
+```
+/new-session
+```
+
+The orchestrator will guide you through collecting session details and coordinate the sub-agents to create your complete session package with cross-week intelligence applied for optimal success.
