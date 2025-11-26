@@ -18,19 +18,19 @@ This index maintains a record of all AI Friday sessions, their status, and key o
 1. ✅ Session structure and agenda completed
 2. ✅ Host preparation materials generated
 3. ✅ Communication templates ready for distribution
-4. Follow the [prep checklist](./sessions/2024-11-28-week-1/generated/prep_checklist.md) for next steps
+4. Follow the [prep checklist](./sessions/2024-12-05-week-1/generated/prep_checklist.md) for next steps
 
 ## 📅 Upcoming Sessions
 
-### Week 1 - 2024-11-28 (INAUGURAL SESSION)
+### Week 1 - 2024-12-05 (INAUGURAL SESSION)
 - **Theme:** Prompt Engineering Basics
 - **Hosts:** Bora Alap & Remy Reurling (co-hosting)
 - **Format:** Lightning talk + Live demo + Hands-on practice + Q&A clinic
 - **Content:** 5 practical prompt frameworks for immediate use
 - **Status:** ✅ Created | ⏳ In Preparation
-- **Folder:** [sessions/2024-11-28-week-1](./sessions/2024-11-28-week-1/)
+- **Folder:** [sessions/2024-12-05-week-1](./sessions/2024-12-05-week-1/)
 
-**Next Session Planned:** Week 3 - December 12th (topic TBD based on community feedback)
+**Next Session Planned:** Week 2 - December 12th (topic TBD based on community feedback)
 
 ## 📚 Completed Sessions
 

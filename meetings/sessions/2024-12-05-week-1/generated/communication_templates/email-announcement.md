@@ -2,7 +2,7 @@
 ## Inaugural AI Friday Session
 
 **Subject Line Options:**
-- 🚀 NEW: AI Friday - Prompt Engineering Basics (Nov 28th)
+- 🚀 NEW: AI Friday - Prompt Engineering Basics (Dec 5th)
 - Learn Prompt Engineering That Actually Works - AI Friday Launch
 - AI Friday Week 1: 5 Frameworks That Will Change How You Use AI
 
@@ -10,14 +10,14 @@
 
 ## Email Content Template
 
-**Subject**: 🚀 NEW: AI Friday - Prompt Engineering Basics (Nov 28th)
+**Subject**: 🚀 NEW: AI Friday - Prompt Engineering Basics (Dec 5th)
 
 Hi everyone,
 
 We're launching something new: **AI Friday** - biweekly sessions where we share AI tools, tips, and learn from each other. Think of it as a friendly learning community focused on practical AI skills we can all use immediately.
 
 ### 🎯 Inaugural Session: Prompt Engineering Basics
-**When**: Thursday, November 28th, [TIME]
+**When**: Thursday, December 5th, [TIME]
 **Duration**: 60 minutes
 **Hosts**: Bora Alap & Remy Reurling
 **Where**: [Meeting Link]
@@ -86,7 +86,7 @@ Hi everyone,
 
 Quick reminder about tomorrow's inaugural AI Friday session!
 
-**Tomorrow, November 28th at [TIME]**
+**Tomorrow, December 5th at [TIME]**
 AI Friday Week 1: Prompt Engineering Basics
 
 ### Come Prepared (Optional):

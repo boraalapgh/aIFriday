@@ -1,7 +1,7 @@
 # AI Friday - Week 1: Prompt Engineering Basics
 ## Session Overview
 
-**Date**: November 28th, 2024
+**Date**: December 5th, 2024
 **Time**: 60 minutes
 **Hosts**: Bora Alap and Remy Reurling
 **Theme**: Prompt Engineering Basics
@@ -53,8 +53,8 @@
 - **Tool Adoption**: Team members request access or trials of Toqan post-session
 
 ### 📞 Host Coordination
-- **Bora Alap**: Primary facilitator, Toqan demo presenter
-- **Remy Reurling**: Co-host, technical support, clinic moderator
+- **Bora Alap**: Primary facilitator, technical support, clinic moderator
+- **Remy Reurling**: Co-host,Toqan demo presenter 
 - **Recording**: Yes - for team members who can't attend live
 - **Platform**: [Teams/Zoom link to be shared via communication templates]
 - **Demo Prep**: Ensure Toqan.ai access and prepare sample Jira integration scenarios
@@ -64,7 +64,7 @@
 - Provide Toqan.ai access information and trial setup instructions
 - Share demo examples and Jira integration templates used in session
 - Collect feedback via brief survey (including Toqan interest/adoption questions)
-- Schedule Week 3 session (Dec 12th) based on interest and speaker availability
+- Schedule Week 2 session (Dec 12th) based on interest and speaker availability
 - Build speaker pipeline from community feedback
 - Track Toqan tool adoption within the team post-session
 

@@ -1,7 +1,7 @@
 # AI Friday - Week 1 Agenda
 ## Prompt Engineering Basics: 5 Frameworks That Actually Stick
 
-**Date**: November 28th, 2024
+**Date**: December 5th, 2024
 **Duration**: 60 minutes
 **Hosts**: Bora Alap (Primary) & Remy Reurling (Co-host)
 **Recording**: Yes
@@ -253,6 +253,6 @@ PRD: [paste PRD output]
 
 ---
 
-**Next AI Friday**: December 12th (Week 3) - Topic TBD based on community interest
+**Next AI Friday**: December 12th (Week 2) - Topic TBD based on community interest
 **Session Materials**: All templates and resources will be shared post-session
 **Community**: Continue discussions in [team channel] for ongoing AI Friday updates
