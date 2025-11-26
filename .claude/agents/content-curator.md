@@ -173,55 +173,85 @@ Master content plan with complete resource compilation:
 
 ## Context Management
 
-### Update `context/workflow.json`:
-```json
-{
-  "workflow": {
-    "current_step": "content_curator_complete",
-    "completed_steps": ["initialization", "session_manager", "content_curator"],
-    "pending_steps": ["meeting_coordinator"]
-  }
-}
+### Update `context/workflow.md`:
+```markdown
+---
+workflow_current_step: "content_curator_complete"
+workflow_completed_steps: ["initialization", "session_manager", "content_curator"]
+workflow_pending_steps: ["meeting_coordinator"]
+---
+
+# Workflow Update - Content Curator Complete
+
+Content curation phase completed. All speaker slots filled and content plan finalized.
 ```
 
-### Create `context/content_curator.json`:
-```json
-{
-  "agent": {
-    "name": "content_curator",
-    "completed_at": "{timestamp}",
-    "status": "completed"
-  },
-  "content_analysis": {
-    "submissions_reviewed": ["{submission details}"],
-    "speakers_contacted": ["{speaker list}"],
-    "baseline_topics_prepared": ["{backup content}"]
-  },
-  "final_content_plan": {
-    "lightning_talks": [
-      {
-        "speaker": "{name}",
-        "topic": "{topic}",
-        "status": "confirmed | pending | baseline",
-        "technical_requirements": ["{requirements}"]
-      }
-    ],
-    "feature_demo": {
-      "speaker": "{name}",
-      "topic": "{topic}",
-      "status": "{status}",
-      "complexity": "high | medium | low"
-    },
-    "backup_readiness": "fully_prepared | partial | needs_work"
-  },
-  "next_agent_context": {
-    "agent": "meeting_coordinator",
-    "confirmed_speakers": ["{final speaker list}"],
-    "technical_requirements": ["{all tech needs}"],
-    "communication_timeline": "{coordination schedule}",
-    "special_considerations": ["{any unique needs}"]
-  }
-}
+### Create `context/content_curator.md`:
+```markdown
+---
+agent: "content_curator"
+started_at: "{timestamp}"
+completed_at: "{timestamp}"
+status: "completed"
+---
+
+# Content Curator Context - Week {N}
+
+## Content Analysis Summary
+- **Submissions Reviewed**: {count} submissions from queue
+- **Speakers Contacted**: {speaker_list}
+- **Baseline Topics Prepared**: {backup_content_ready}
+
+## Final Content Plan
+
+### Lightning Talks ({X} confirmed)
+1. **{Speaker Name} - "{Topic Title}"**
+   - Status: Confirmed/Pending/Baseline
+   - Duration: {X minutes}
+   - Technical Requirements: {requirements}
+   - Resources: {materials_needed}
+
+2. **{Speaker Name} - "{Topic Title}"**
+   - Status: Confirmed/Pending/Baseline
+   - Duration: {X minutes}
+   - Technical Requirements: {requirements}
+   - Resources: {materials_needed}
+
+### Feature Deep Dive
+- **Speaker**: {name}
+- **Topic**: {detailed_topic}
+- **Status**: {confirmed/pending}
+- **Complexity**: High/Medium/Low
+- **Interactive Elements**: {Q&A, demo, hands-on}
+
+### Backup Content Readiness
+- **Status**: Fully Prepared/Partial/Needs Work
+- **Baseline Topics Ready**: {topic_list}
+- **Host Preparation**: {level_of_readiness}
+
+## Technical Requirements Summary
+- **Screen Sharing**: {requirements}
+- **Demo Environments**: {specific_needs}
+- **Recording**: {special_considerations}
+- **Platform Features**: {needed_capabilities}
+
+## Speaker Coordination Status
+- **Confirmations Received**: {count}/{total}
+- **Preparation Materials Sent**: {status}
+- **Technical Checks Scheduled**: {dates}
+- **Communication Timeline**: {schedule}
+
+## Handoff to Meeting Coordinator
+- **Confirmed Speakers**: {final_speaker_list}
+- **All Technical Requirements**: {consolidated_tech_needs}
+- **Communication Schedule**: {coordination_timeline}
+- **Special Considerations**: {unique_requirements}
+
+## Quality Assessment
+- **Content Balance**: {variety_and_progression}
+- **Speaker Readiness**: {preparation_confidence}
+- **Backup Plan Status**: {fallback_options}
+- **Overall Confidence**: {1-10}/10
 ```
 
 ## Quality Standards

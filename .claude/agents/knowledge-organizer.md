@@ -256,65 +256,107 @@ Updates for the global resource library:
 
 ## Context Management
 
-### Update `context/workflow.json`:
-```json
-{
-  "workflow": {
-    "current_step": "knowledge_organizer_complete",
-    "completed_steps": ["initialization", "session_manager", "content_curator", "meeting_coordinator", "knowledge_organizer"],
-    "pending_steps": ["archive_manager"]
-  }
-}
+### Update `context/workflow.md`:
+```markdown
+---
+workflow_current_step: "knowledge_organizer_complete"
+workflow_completed_steps: ["initialization", "session_manager", "content_curator", "meeting_coordinator", "knowledge_organizer"]
+workflow_pending_steps: ["archive_manager"]
+workflow_status: "documentation_complete"
+---
+
+# Workflow Update - Knowledge Organizer Complete
+
+Session documentation completed. All materials processed, organized, and ready for team access and archival.
 ```
 
-### Create `context/knowledge_organizer.json`:
-```json
-{
-  "agent": {
-    "name": "knowledge_organizer",
-    "started_at": "{timestamp}",
-    "completed_at": "{timestamp}",
-    "status": "completed"
-  },
-  "input_assessment": {
-    "raw_notes_quality": "excellent | good | fair | poor",
-    "transcript_available": true,
-    "chat_log_available": true,
-    "shared_resources_count": "{number}",
-    "material_completeness": "complete | good | partial | minimal"
-  },
-  "processing_results": {
-    "content_sections_processed": [
-      "executive_summary",
-      "lightning_talks",
-      "deep_dive",
-      "clinic_discussion"
-    ],
-    "action_items_extracted": "{count}",
-    "resources_cataloged": "{count}",
-    "key_learnings_identified": "{count}",
-    "follow_up_topics_generated": "{count}"
-  },
-  "quality_metrics": {
-    "completeness_score": "{0-10}",
-    "accuracy_confidence": "{0-10}",
-    "actionability_score": "{0-10}",
-    "processing_time_minutes": "{duration}"
-  },
-  "outputs_created": {
-    "structured_notes": "outputs/structured_notes.md",
-    "action_items": "outputs/action_items.md",
-    "confluence_export": "outputs/confluence_export.md",
-    "resource_updates": "outputs/resource_updates.md"
-  },
-  "next_agent_context": {
-    "agent": "archive_manager",
-    "content_quality": "production_ready",
-    "knowledge_base_ready": true,
-    "action_tracking_ready": true,
-    "resource_integration_ready": true
-  }
-}
+### Create `context/knowledge_organizer.md`:
+```markdown
+---
+agent: "knowledge_organizer"
+started_at: "{timestamp}"
+completed_at: "{timestamp}"
+status: "completed"
+session_documented: true
+---
+
+# Knowledge Organizer Context - Week {N}
+
+## Input Material Assessment
+- **Raw Notes Quality**: Excellent/Good/Fair/Poor
+- **Transcript Available**: ✅/❌ {quality_if_available}
+- **Chat Log Available**: ✅/❌ {completeness}
+- **Shared Resources Count**: {number} items collected
+- **Overall Material Completeness**: Complete/Good/Partial/Minimal
+
+## Processing Results Summary
+
+### Content Sections Processed
+- ✅ **Executive Summary**: Key outcomes and highlights
+- ✅ **Lightning Talks**: {count} presentations structured
+- ✅ **Feature Deep Dive**: Detailed technical content organized
+- ✅ **Open Clinic Discussion**: Community insights captured
+
+### Extraction Results
+- **Action Items**: {count} items with clear ownership
+- **Resources Cataloged**: {count} tools and links organized
+- **Key Learnings**: {count} insights documented
+- **Follow-up Topics**: {count} future session ideas generated
+
+## Quality Metrics
+- **Completeness Score**: {0-10}/10
+- **Accuracy Confidence**: {0-10}/10
+- **Actionability Score**: {0-10}/10
+- **Processing Time**: {duration} minutes
+
+## Deliverables Created
+- **Structured Notes**: `outputs/structured_notes.md`
+- **Action Items Tracker**: `outputs/action_items.md`
+- **Confluence Export**: `outputs/confluence_export.md`
+- **Resource Library Updates**: `outputs/resource_updates.md`
+
+## Content Quality Assessment
+
+### Session Highlights
+- **Most Valuable Content**: {top_insight}
+- **Best Community Response**: {engaged_topic}
+- **Actionable Takeaways**: {practical_outcomes}
+- **Resource Goldmine**: {valuable_tools_shared}
+
+### Documentation Completeness
+- **Speaker Attribution**: ✅ All contributions properly credited
+- **Technical Details**: ✅ Implementation specifics preserved
+- **Community Input**: ✅ Q&A and discussions captured
+- **Resources**: ✅ All links and tools cataloged
+
+## Action Items Analysis
+- **High Priority**: {count} urgent items requiring immediate attention
+- **Medium Priority**: {count} important but flexible timeline
+- **Low Priority**: {count} nice-to-have improvements
+- **Clear Ownership**: ✅ Every item has single responsible person
+- **Realistic Timelines**: ✅ Due dates based on complexity assessment
+
+## Knowledge Base Integration Ready
+- **Content Quality**: Production ready for team access
+- **Search Optimization**: Keywords and tags applied
+- **Cross-References**: Links to related sessions and topics
+- **Resource Integration**: New tools added to master library
+- **Action Tracking**: Items ready for project management integration
+
+## Follow-up Requirements
+- **Resource Sharing**: {timeline} for team distribution
+- **Action Item Tracking**: {process} for monitoring progress
+- **Community Feedback**: {method} for session evaluation
+- **Archive Preparation**: Ready for long-term storage
+
+## Recommendations for Future Sessions
+- **Content Format**: {what_worked_well}
+- **Speaker Preparation**: {improvement_suggestions}
+- **Community Engagement**: {engagement_strategies}
+- **Resource Collection**: {process_improvements}
+
+## Next Phase Handoff
+Ready for archive management and long-term knowledge preservation. All materials organized and accessible for team use.
 ```
 
 ## Action Item Extraction Guidelines

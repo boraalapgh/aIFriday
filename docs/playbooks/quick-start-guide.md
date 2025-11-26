@@ -163,14 +163,24 @@ AI Friday is a biweekly learning session where teams share AI tools, tips, and l
 
 ## 🛠 Advanced Features (When You're Ready)
 
-### Automation Scripts
+### Topic Idea Capture
 ```bash
-cd automation
-npm install
-npm run new-session    # Interactive session creation
-npm run update-calendar # Generate all communications
-npm run export-confluence # Format for knowledge sharing
+/add-topic-idea [your idea here]
 ```
+Quickly capture topic suggestions when inspiration strikes:
+- `/add-topic-idea Prompt engineering basics for complete beginners`
+- `/add-topic-idea How I use Claude Code for design workflows`
+
+Ideas get stored in `content/topic-ideas.md` and processed during backlog updates.
+
+### Pipeline Management
+```bash
+/update-backlog
+```
+Review and organize the content pipeline:
+- Process new topic ideas from the community
+- Match speakers to suitable topics
+- Balance content across sessions
 
 ### Custom Skills
 - **ai-friday-prep**: Generate meeting prep materials

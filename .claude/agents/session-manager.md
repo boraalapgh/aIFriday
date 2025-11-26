@@ -55,11 +55,18 @@ Create a comprehensive agenda including:
 - Host facilitation notes and technical requirements
 
 ### 2. `generated/prep_checklist.md`
-Create timeline-based preparation checklist:
-- **2 weeks before**: Initial planning and speaker outreach
-- **1 week before**: Confirmations and technical preparation
-- **Day before**: Final checks and backup preparation
-- **Day of**: Session setup and facilitation reminders
+Create timeline-based preparation checklist with detailed step-by-step guidance:
+- **2 weeks before**: Initial planning and speaker outreach (with contact templates and methods)
+- **1 week before**: Confirmations and technical preparation (with verification steps)
+- **Day before**: Final checks and backup preparation (with specific checklists)
+- **Day of**: Session setup and facilitation reminders (with timing and technical steps)
+
+Each task should include:
+- **What to do**: Clear description of the task
+- **How to do it**: Step-by-step instructions
+- **Where to find resources**: File locations, templates, contact lists
+- **Success criteria**: How to know the task is complete
+- **Backup plans**: What to do if the primary approach fails
 
 ### 3. `README.md`
 Session overview document with:
@@ -71,69 +78,197 @@ Session overview document with:
 ### 4. Context Files
 Update both workflow context and your agent-specific context with decisions made, patterns applied, and handoff information for the next agent.
 
-## Example Agenda Template
+## Example Prep Checklist Template
 
 ```markdown
-# AI Friday - Week {N}: {Theme}
-**Date**: {YYYY-MM-DD}
-**Host**: {Host Name}
-**Format**: Standard 60-minute session
+# Host Preparation Checklist - Week {N}: {Theme}
 
-## Session Structure (60 minutes)
-- **Opening & Introductions** (5 min) - Welcome and quick introductions
-- **Lightning Talks** (25 min) - 2-3 focused presentations, 8-10 min each
-- **Feature Deep Dive** (20 min) - Detailed exploration of one tool/technique
-- **Open Clinic & Q&A** (10 min) - Community discussion and help
+## 📅 2 Weeks Before Session (by {Date})
 
-## Confirmed Content
-*[Content Curator will populate this section]*
-- TBD: Lightning talk #1
-- TBD: Lightning talk #2
-- TBD: Feature deep dive
+### 🎯 Speaker Outreach Initiated
+**What to do**: Contact potential speakers for session content
+**How to do it**:
+1. Check `content/topic-ideas.md` for relevant topic suggestions
+2. Review `content/pipeline/priority-queue.md` for confirmed speakers
+3. Use email template from `templates/speaker_outreach.md`
+4. Contact 5-7 potential speakers (aim for 3-4 confirmations)
+5. Post general call in team channels (Slack #ai-friday)
 
-## Backup Content (if needed)
-- **Baseline Topic**: {Suggested baseline topic based on theme}
-- **Community Clinic**: Extended discussion time with theme-related prompts
+**Where to find resources**:
+- Email templates: `templates/speaker_outreach.md`
+- Team contact list: `contacts/team_directory.md`
+- Topic ideas: `content/topic-ideas.md`
 
-## Host Notes
-- {Insights from previous sessions with this host}
-- {Technical requirements based on theme}
-- {Timing notes based on successful formats}
+**Success criteria**:
+- At least 3 speaker confirmations for lightning talks
+- 1 confirmed deep dive presenter
+- Posted team announcement for broader participation
 
-## Technical Requirements
-- Screen sharing enabled for all presenters
-- Recording setup (if requested)
-- Demo environment preparation
-- Communication tools (Slack, chat) ready
+**Backup plan**: If no speakers confirm, prepare baseline topics from `content/baseline-topics/`
+
+### 📋 Session Planning
+**What to do**: Create detailed session structure and timing
+**How to do it**:
+1. Review successful previous sessions in `meetings/sessions/`
+2. Select appropriate baseline topics as backup
+3. Create timing breakdown with buffer time
+4. Document host responsibilities and handoff points
+
+**Where to find resources**:
+- Previous sessions: `meetings/sessions/`
+- Baseline topics: `content/baseline-topics/`
+- Format templates: `templates/session_formats/`
+
+**Success criteria**: Complete agenda with timing, speakers, and backup plans
+**Backup plan**: Use proven format from most recent successful session
+
+## 📅 1 Week Before Session (by {Date})
+
+### 👥 Speaker Confirmations
+**What to do**: Verify all speakers are prepared and ready
+**How to do it**:
+1. Send confirmation email using `templates/speaker_confirmation.md`
+2. Schedule 15-minute technical checks with each speaker
+3. Request presentation outline or demo plan
+4. Verify technical requirements (screen sharing, software access)
+5. Confirm availability and backup contact method
+
+**Where to find resources**:
+- Confirmation templates: `templates/speaker_confirmation.md`
+- Technical check calendar: [Platform calendar link]
+- Requirements checklist: `checklists/speaker_tech_requirements.md`
+
+**Success criteria**:
+- All speakers confirmed with outlines received
+- Technical checks scheduled
+- Backup speakers identified for no-shows
+
+**Backup plan**:
+- Use baseline topics if speakers cancel
+- Extend clinic time for community discussion
+- Co-host prepared with backup presentation
+
+### 🔧 Technical Setup
+**What to do**: Test all platform features and demo environments
+**How to do it**:
+1. Test meeting platform with all planned features
+2. Verify recording setup and quality
+3. Test screen sharing transitions
+4. Check demo environments for all tools mentioned
+5. Prepare backup recording method
+
+**Where to find resources**:
+- Platform guide: `guides/meeting_platform_setup.md`
+- Recording checklist: `checklists/recording_setup.md`
+- Demo environment guide: `guides/demo_environments.md`
+
+**Success criteria**:
+- Platform fully tested with all features working
+- Recording confirmed working with backup ready
+- All demo environments verified accessible
+
+**Backup plan**:
+- Local recording if platform recording fails
+- Use static screenshots if screen sharing fails
+- Have dial-in numbers ready for audio issues
+
+## 📅 Day Before Session ({Date})
+
+### ✅ Final Confirmations
+**What to do**: Ensure everything is ready for session execution
+**How to do it**:
+1. Send final reminder to all speakers with session details
+2. Confirm host availability and coordination
+3. Test meeting link and platform access
+4. Review agenda and timing one final time
+5. Prepare all backup content for immediate access
+
+**Where to find resources**:
+- Reminder templates: `templates/final_reminder.md`
+- Session details: `generated/session_overview.md`
+- Backup content: `content/baseline-topics/`
+
+**Success criteria**:
+- All speakers confirmed and ready
+- Platform access verified
+- Backup content immediately accessible
+
+**Backup plan**:
+- Use baseline topics if speakers unavailable
+- Solo host session if co-host unavailable
+- Reschedule if major issues (communicate immediately)
 ```
 
 ## Context Management
 
-### Update `context/workflow.json`:
-```json
-{
-  "session": {
-    "session_id": "{YYYY-MM-DD-week-N}",
-    "date": "{YYYY-MM-DD}",
-    "week_number": "{N}",
-    "status": "planning",
-    "folder_path": "/meetings/sessions/{session_folder}/"
-  },
-  "workflow": {
-    "current_step": "session_manager_complete",
-    "completed_steps": ["initialization", "session_manager"],
-    "pending_steps": ["content_curator", "meeting_coordinator"]
-  },
-  "cross_week_references": {
-    "previous_session": "{most_recent_session_id}",
-    "patterns_learned": ["{patterns_applied}"],
-    "successful_approaches": ["{approaches_to_repeat}"]
-  }
-}
+### Update `context/workflow.md`:
+```markdown
+---
+session_id: "{YYYY-MM-DD-week-N}"
+date: "{YYYY-MM-DD}"
+week_number: {N}
+status: "planning"
+workflow_type: "session_creation"
+folder_path: "/meetings/sessions/{session_folder}/"
+---
+
+# Workflow Context - AI Friday Week {N}
+
+## Session Overview
+- **Theme**: {Session Theme}
+- **Format**: {Session Format}
+- **Status**: Planning phase complete
+
+## Workflow Progress
+- **Current Step**: session_manager_complete
+- **Completed Steps**: initialization, session_manager
+- **Pending Steps**: content_curator, meeting_coordinator
+
+## Cross-Week Learning Applied
+- **Previous Session Referenced**: {most_recent_session_id}
+- **Patterns Applied**: {patterns_applied}
+- **Successful Approaches**: {approaches_to_repeat}
 ```
 
-### Create `context/session_manager.json`:
-Document your analysis, decisions, and outputs with full context for audit trail and future learning.
+### Create `context/session_manager.md`:
+```markdown
+---
+agent: "session_manager"
+started_at: "{timestamp}"
+completed_at: "{timestamp}"
+status: "completed"
+---
+
+# Session Manager Context - Week {N}
+
+## Analysis Completed
+- **Previous Sessions Reviewed**: {count} sessions analyzed
+- **Cross-Week Patterns**: {patterns_identified}
+- **Host Preferences**: {host_preferences_applied}
+- **Theme Alignment**: {theme_considerations}
+
+## Decisions Made
+- **Session Format**: {format_chosen_and_reasoning}
+- **Timing Structure**: {time_allocation_decisions}
+- **Baseline Topics**: {backup_content_selected}
+- **Special Requirements**: {any_unique_needs}
+
+## Deliverables Created
+- `generated/agenda.md`: {brief_description}
+- `generated/prep_checklist.md`: {brief_description}
+- `README.md`: {brief_description}
+
+## Handoff to Content Curator
+- **Speaker Slots**: {number} lightning talks, 1 deep dive
+- **Theme Guidance**: {content_direction}
+- **Technical Requirements**: {any_special_needs}
+- **Success Criteria**: {what_makes_this_session_successful}
+
+## Quality Assessment
+- **Confidence Level**: {1-10}/10
+- **Risk Areas**: {potential_challenges}
+- **Mitigation**: {backup_plans_prepared}
+```
 
 ## Success Criteria
 

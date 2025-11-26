@@ -40,7 +40,12 @@ content/
 ## Core Responsibilities
 
 ### 1. Submission Processing
-When processing new submissions:
+When processing new submissions and topic ideas:
+
+**Topic Idea Review**:
+- **Check Topic Ideas**: Review `/content/topic-ideas.md` for new community suggestions
+- **Process Raw Ideas**: Move developed ideas into appropriate pipeline stages
+- **Update Ideas File**: Archive processed ideas and maintain clean capture system
 
 **Evaluation Criteria**:
 - **Topic Relevance**: Does it serve the AI Friday audience and mission?
@@ -163,44 +168,103 @@ When processing new submissions:
 
 ## Context Management
 
-### Update `context/workflow.json` when involved:
-```json
-{
-  "workflow": {
-    "current_step": "topic_manager_complete",
-    "agents_involved": ["topic_manager"]
-  }
-}
+### Update `context/workflow.md` when involved:
+```markdown
+---
+workflow_current_step: "topic_manager_complete"
+workflow_agents_involved: ["topic_manager"]
+pipeline_maintenance: true
+---
+
+# Workflow Update - Topic Manager Complete
+
+Pipeline maintenance completed. Content queue updated and speaker outreach coordinated.
 ```
 
-### Create `context/topic_manager.json`:
-```json
-{
-  "agent": {
-    "name": "topic_manager",
-    "started_at": "{timestamp}",
-    "completed_at": "{timestamp}",
-    "status": "completed"
-  },
-  "pipeline_analysis": {
-    "submissions_processed": "{count}",
-    "speakers_contacted": ["{speaker_list}"],
-    "sessions_planned": "{count}",
-    "gaps_identified": ["{content_gaps}"]
-  },
-  "actions_taken": {
-    "submissions_moved": ["{from_state} -> {to_state}"],
-    "speakers_scheduled": ["{speaker_assignments}"],
-    "outreach_generated": ["{outreach_materials}"],
-    "pipeline_updates": ["{file_updates}"]
-  },
-  "recommendations": {
-    "immediate_actions": ["{urgent_items}"],
-    "speaker_outreach": ["{people_to_contact}"],
-    "content_priorities": ["{topic_areas}"],
-    "session_themes": ["{upcoming_theme_suggestions}"]
-  }
-}
+### Create `context/topic_manager.md`:
+```markdown
+---
+agent: "topic_manager"
+started_at: "{timestamp}"
+completed_at: "{timestamp}"
+status: "completed"
+operation_type: "pipeline_maintenance"
+---
+
+# Topic Manager Context - Pipeline Update
+
+## Pipeline Analysis Summary
+- **Submissions Processed**: {count} new submissions reviewed
+- **Topic Ideas Processed**: {count} community ideas moved into pipeline
+- **Speakers Contacted**: {speaker_list}
+- **Sessions Planned**: {count} sessions have content confirmed
+- **Content Gaps Identified**: {gap_areas}
+
+## Actions Taken
+
+### Topic Idea Processing
+- **Ideas Reviewed**: {count} new community suggestions processed
+- **Moved to Pipeline**: {ideas_promoted} ready ideas advanced
+- **Speaker Matches Found**: {speaker_matches} for specific ideas
+- **Ideas Archived**: {ideas_completed} processed and filed
+
+### Submission Processing
+- **Moved to Priority Queue**: {submissions_promoted}
+- **Moved to Medium Term**: {submissions_scheduled}
+- **Moved to Idea Backlog**: {submissions_parked}
+- **Archived**: {submissions_completed}
+
+### Speaker Coordination
+- **New Speakers Contacted**: {outreach_list}
+- **Follow-up Reminders Sent**: {reminder_list}
+- **Speaker Assignments**: {confirmed_speakers}
+- **Preparation Support**: {guidance_provided}
+
+### Pipeline Updates
+- **Priority Queue**: Updated with {count} new items
+- **Medium Term**: {count} topics in development
+- **Idea Backlog**: {count} concepts awaiting development
+- **Baseline Topics**: {count} ready-to-run backups
+
+## Outreach Generated
+- **Personalized Invitations**: {targeted_outreach}
+- **General Announcements**: {community_calls}
+- **Theme-Based Requests**: {focused_outreach}
+- **Success Story Highlights**: {recognition_shared}
+
+## Current Pipeline Health
+- **Status**: Green/Yellow/Red
+- **Weeks with Confirmed Content**: {count}
+- **Speakers in Active Preparation**: {count}
+- **Immediate Gaps**: {urgent_needs}
+
+## Recommendations
+
+### Immediate Actions Needed
+- {urgent_item_1}
+- {urgent_item_2}
+- {urgent_item_3}
+
+### Speaker Outreach Priority
+- **High Priority**: {people_to_contact_urgently}
+- **Medium Priority**: {general_outreach_list}
+- **Future Development**: {long_term_prospects}
+
+### Content Priorities
+- **High Demand Topics**: {popular_requests}
+- **Underrepresented Areas**: {gap_topics}
+- **Emerging Technologies**: {trending_areas}
+
+### Upcoming Session Themes
+- **Next 2-3 Sessions**: {immediate_themes}
+- **Next Quarter**: {strategic_themes}
+- **Special Events**: {seasonal_opportunities}
+
+## Quality Metrics
+- **Pipeline Coverage**: {weeks_ahead} weeks confirmed
+- **Content Variety**: {diversity_score}/10
+- **Speaker Engagement**: {response_rate}%
+- **Community Satisfaction**: {feedback_score}/10
 ```
 
 ## Quality Standards

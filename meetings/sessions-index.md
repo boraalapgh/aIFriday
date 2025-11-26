@@ -7,21 +7,30 @@ Track all AI Friday sessions and their status.
 This index maintains a record of all AI Friday sessions, their status, and key outcomes. Use this for planning future sessions and tracking community growth.
 
 ### Session Statistics
-- **Total Sessions**: 0 (ready to start!)
-- **Active Sessions**: 0
+- **Total Sessions**: 1 (inaugural session created!)
+- **Active Sessions**: 1 (in preparation)
 - **Completed Sessions**: 0
-- **Community Speakers**: 0
+- **Community Speakers**: 2 (Bora Alap, Remy Reurling)
 
 ## 🚀 Getting Started
 
-**First session?** Use the Quick Start Guide:
-1. Run `/new-session` to create your first session
-2. Choose from baseline topics or recruit 2-3 speakers
-3. Follow the [Quick Start Guide](../docs/playbooks/quick-start-guide.md)
+**First session created!** Week 1 materials are ready:
+1. ✅ Session structure and agenda completed
+2. ✅ Host preparation materials generated
+3. ✅ Communication templates ready for distribution
+4. Follow the [prep checklist](./sessions/2024-11-28-week-1/generated/prep_checklist.md) for next steps
 
 ## 📅 Upcoming Sessions
 
-*Sessions will appear here as they are created using `/new-session`*
+### Week 1 - 2024-11-28 (INAUGURAL SESSION)
+- **Theme:** Prompt Engineering Basics
+- **Hosts:** Bora Alap & Remy Reurling (co-hosting)
+- **Format:** Lightning talk + Live demo + Hands-on practice + Q&A clinic
+- **Content:** 5 practical prompt frameworks for immediate use
+- **Status:** ✅ Created | ⏳ In Preparation
+- **Folder:** [sessions/2024-11-28-week-1](./sessions/2024-11-28-week-1/)
+
+**Next Session Planned:** Week 3 - December 12th (topic TBD based on community feedback)
 
 ## 📚 Completed Sessions
 
