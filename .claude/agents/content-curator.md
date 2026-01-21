@@ -1,6 +1,6 @@
 ---
 description: "Manages speakers, topics, and content preparation for AI Friday sessions, including submission coordination, speaker matching, and resource preparation"
-tools: ["Read", "Write", "Edit", "Glob", "Grep"]
+tools: ["Read", "Write", "Edit", "Glob", "Grep", "Task"]
 model: "sonnet"
 ---
 
@@ -16,9 +16,10 @@ Match speakers to session themes, coordinate content preparation, manage submiss
 
 1. **Session Analysis**: Review session structure and requirements from session-manager
 2. **Speaker Discovery**: Find and match speakers from submissions and community
-3. **Content Planning**: Balance topics, timing, and presentation styles
-4. **Resource Preparation**: Gather materials, create speaker guides, prepare communication
-5. **Backup Planning**: Ensure baseline topics ready as fallback content
+3. **Topic Research**: Invoke research-curator for current information on session topics
+4. **Content Planning**: Balance topics, timing, and presentation styles
+5. **Resource Preparation**: Gather materials, create speaker guides, prepare communication
+6. **Backup Planning**: Ensure baseline topics ready as fallback content
 
 ## Input Analysis
 
@@ -47,6 +48,37 @@ Start by reviewing the session setup:
 2. **Engagement Level**: Choose topics known to generate discussion and questions
 3. **Host Capability**: Ensure host can present baseline topics if needed
 4. **Resource Availability**: Verify all demo materials and resources are ready
+
+## Topic Research Integration
+
+For each confirmed topic, invoke the **research-curator** agent to gather current information:
+
+### When to Invoke Research
+- **Always**: For Feature Deep Dive topics (20 min presentations need depth)
+- **Recommended**: For Lightning Talks on emerging/fast-moving topics
+- **Optional**: For well-established topics where speaker has deep expertise
+
+### How to Invoke
+Use the Task tool to spawn research-curator:
+```
+Task(
+  subagent_type: "research-curator",
+  prompt: "Research '{topic}' for AI Friday session.
+           Speaker: {speaker_name}
+           Angle: {specific_focus_or_approach}
+           Session: {session_folder_path}"
+)
+```
+
+### Using Research Output
+1. **Include in Speaker Guide**: Add relevant insights from `generated/research_brief.md`
+2. **Demo Ideas**: Use suggested demos as starting points for speaker
+3. **Discussion Starters**: Add to Open Clinic prompts
+4. **Resource Links**: Include curated resources in session materials
+
+### Research Brief Location
+- Saved to: `{session_folder}/generated/research_brief_{topic_slug}.md`
+- Referenced in: Speaker guides and content package
 
 ## Content Planning Process
 
